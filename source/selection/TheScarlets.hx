@@ -24,12 +24,12 @@ class TheScarlets extends FlxState
     var arrows:FlxTypedGroup<FlxSprite>;
 
     var curSelected:Int = 0;
-    var images:Array<CharImage> = [ // first parameter is the image path, second one is the description, third one is the name
-        new CharImage('characters/luis', '', 'Luis Staffell'),
-        new CharImage('characters/mike', '', 'Mike Staffell'),
-        new CharImage('characters/carl', '', 'Carl Cabot'),
-        new CharImage('characters/baulk', '', 'Baulk Harris'),
-        new CharImage('characters/benson', '', 'Dr. Benson')
+    var images:Array<Scarlets> = [ // first parameter is the image path, second one is the description, third one is the name
+        new Scarlets('characters/luis', '', 'Luis Staffell'),
+        new Scarlets('characters/mike', '', 'Mike Staffell'),
+        new Scarlets('characters/carl', '', 'Carl Cabot'),
+        new Scarlets('characters/baulk', '', 'Baulk Harris'),
+        new Scarlets('characters/benson', '', 'Dr. Benson')
     ];
 
     override function create()
@@ -107,8 +107,7 @@ class TheScarlets extends FlxState
                 changeSelection(FlxG.keys.justPressed.RIGHT ? 1 : -1);
             }
 
-            if (FlxG.keys.justPressed.ESCAPE)
-            {
+            if (FlxG.keys.justPressed.ESCAPE) {
                 FlxG.switchState(new PlayState());
             }
         }
@@ -196,7 +195,7 @@ class TheScarlets extends FlxState
     }
 }
 
-class CharImage
+class Scarlets
 {
     public var path:String;
     public var description:String;

@@ -24,12 +24,12 @@ class FastServices extends FlxState
     var arrows:FlxTypedGroup<FlxSprite>;
 
     var curSelected:Int = 0;
-    var images:Array<CharImage> = [ // first parameter is the image path, second one is the description, third one is the name
-        new CharImage('characters/erick', '', 'Erick Sunset'),
-        new CharImage('characters/ford', '', 'Ford Silver'),
-        new CharImage('characters/charles', '', 'Charles Ray'),
-        new CharImage('characters/jack-silver', '', 'Jack Silver'),
-        new CharImage('characters/james', '', 'James')
+    var images:Array<Services> = [ // first parameter is the image path, second one is the description, third one is the name
+        new Services('characters/erick', '', 'Erick Sunset'),
+        new Services('characters/ford', '', 'Ford Silver'),
+        new Services('characters/charles', '', 'Charles Ray'),
+        new Services('characters/jack-silver', '', 'Jack Silver'),
+        new Services('characters/james', '', 'James')
     ];
 
     override function create()
@@ -196,7 +196,7 @@ class FastServices extends FlxState
     }
 }
 
-class CharImage
+class Services
 {
     public var path:String;
     public var description:String;

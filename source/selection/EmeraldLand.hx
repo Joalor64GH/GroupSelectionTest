@@ -24,16 +24,16 @@ class EmeraldLand extends FlxState
     var arrows:FlxTypedGroup<FlxSprite>;
 
     var curSelected:Int = 0;
-    var images:Array<CharImage> = [ // first parameter is the image path, second one is the description, third one is the name
-        new CharImage('characters/demon', '', 'Gem Demon'),
-        new CharImage('characters/jack-metzer', '', 'Jack Metzer'),
-        new CharImage('characters/loan', '', 'Loan Baylor'),
-        new CharImage('characters/henry', '', 'Henry'),
-        new CharImage('characters/larry', '', 'Larry'),
-        new CharImage('characters/branko', '', 'Branko'),
-        new CharImage('characters/lester', '', 'Lester'),
-        new CharImage('characters/jorge', '', 'Jorge Explorer'),
-        new CharImage('characters/hawk', '', 'Hawk Explorer')
+    var images:Array<Emeralds> = [ // first parameter is the image path, second one is the description, third one is the name
+        new Emeralds('characters/demon', '', 'Gem Demon'),
+        new Emeralds('characters/jack-metzer', '', 'Jack Metzer'),
+        new Emeralds('characters/loan', '', 'Loan Baylor'),
+        new Emeralds('characters/henry', '', 'Henry'),
+        new Emeralds('characters/larry', '', 'Larry'),
+        new Emeralds('characters/branko', '', 'Branko'),
+        new Emeralds('characters/lester', '', 'Lester'),
+        new Emeralds('characters/jorge', '', 'Jorge Explorer'),
+        new Emeralds('characters/hawk', '', 'Hawk Explorer')
     ];
 
     override function create()
@@ -200,7 +200,7 @@ class EmeraldLand extends FlxState
     }
 }
 
-class CharImage
+class Emeralds
 {
     public var path:String;
     public var description:String;

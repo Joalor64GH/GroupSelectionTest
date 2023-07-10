@@ -24,11 +24,11 @@ class BotsCompany extends FlxState
     var arrows:FlxTypedGroup<FlxSprite>;
 
     var curSelected:Int = 0;
-    var images:Array<CharImage> = [ // first parameter is the image path, second one is the description, third one is the name
-        new CharImage('characters/screws', '', 'Screws'),
-        new CharImage('characters/tiky', '', 'Tiky Tan'),
-        new CharImage('characters/chester', '', 'Chester'),
-        new CharImage('characters/dokuro', '', 'Mr. Dokuro')
+    var images:Array<Company> = [ // first parameter is the image path, second one is the description, third one is the name
+        new Company('characters/screws', '', 'Screws'),
+        new Company('characters/tiky', '', 'Tiky Tan'),
+        new Company('characters/chester', '', 'Chester'),
+        new Company('characters/dokuro', '', 'Mr. Dokuro')
     ];
 
     override function create()
@@ -195,7 +195,7 @@ class BotsCompany extends FlxState
     }
 }
 
-class CharImage
+class Company
 {
     public var path:String;
     public var description:String;

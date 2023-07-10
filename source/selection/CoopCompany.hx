@@ -24,12 +24,12 @@ class CoopCompany extends FlxState
     var arrows:FlxTypedGroup<FlxSprite>;
 
     var curSelected:Int = 0;
-    var images:Array<CharImage> = [ // first parameter is the image path, second one is the description, third one is the name
-        new CharImage('characters/bass', '', 'Dr. Bass'),
-        new CharImage('characters/shooter', '', 'Smith Shooter'),
-        new CharImage('characters/coop', '', 'Coop Junior'),
-        new CharImage('characters/detector', '', 'Detector'),
-        new CharImage('characters/mills', '', 'Mills Metal')
+    var images:Array<Coops> = [ // first parameter is the image path, second one is the description, third one is the name
+        new Coops('characters/bass', '', 'Dr. Bass'),
+        new Coops('characters/shooter', '', 'Smith Shooter'),
+        new Coops('characters/coop', '', 'Coop Junior'),
+        new Coops('characters/detector', '', 'Detector'),
+        new Coops('characters/mills', '', 'Mills Metal')
     ];
 
     override function create()
@@ -196,7 +196,7 @@ class CoopCompany extends FlxState
     }
 }
 
-class CharImage
+class Coops
 {
     public var path:String;
     public var description:String;

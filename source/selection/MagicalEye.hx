@@ -24,24 +24,24 @@ class MagicalEye extends FlxState
     var arrows:FlxTypedGroup<FlxSprite>;
 
     var curSelected:Int = 0;
-    var images:Array<CharImage> = [ // first parameter is the image path, second one is the description, third one is the name
-        new CharImage('characters/josh', '', 'Josh Kami'),
-        new CharImage('characters/theo', '', 'Theo'),
-        new CharImage('characters/cosmo_ARM', '', 'Cambor'),
-        new CharImage('characters/spikes', '', 'Spikes'),
-        new CharImage('characters/ladon', '', 'Ladon'),
-        new CharImage('characters/jarry', '', 'Jarry Jaren'),
-        new CharImage('characters/tourette', '', 'Tourette'),
-        new CharImage('characters/chewer', '', 'Chewer'),
-        new CharImage('characters/nimbus', '', 'Nimbus'),
-        new CharImage('characters/rami', '', 'Rami'),
-        new CharImage('characters/hikari', '', 'Hikari'),
-        new CharImage('characters/velda_ARM', '', 'Velda V'),
-        new CharImage('characters/tromby', '', 'Tromby'),
-        new CharImage('characters/felipe', '', 'Felipe'),
-        new CharImage('characters/larry', '', 'Larry'),
-        new CharImage('characters/branko', '', 'Branko'),
-        new CharImage('characters/lester', '', 'Lester')
+    var images:Array<Egypt> = [ // first parameter is the image path, second one is the description, third one is the name
+        new Egypt('characters/josh', '', 'Josh Kami'),
+        new Egypt('characters/theo', '', 'Theo'),
+        new Egypt('characters/cosmo_ARM', '', 'Cambor'),
+        new Egypt('characters/spikes', '', 'Spikes'),
+        new Egypt('characters/ladon', '', 'Ladon'),
+        new Egypt('characters/jarry', '', 'Jarry Jaren'),
+        new Egypt('characters/tourette', '', 'Tourette'),
+        new Egypt('characters/chewer', '', 'Chewer'),
+        new Egypt('characters/nimbus', '', 'Nimbus'),
+        new Egypt('characters/rami', '', 'Rami'),
+        new Egypt('characters/hikari', '', 'Hikari'),
+        new Egypt('characters/velda_ARM', '', 'Velda V'),
+        new Egypt('characters/tromby', '', 'Tromby'),
+        new Egypt('characters/felipe', '', 'Felipe'),
+        new Egypt('characters/larry', '', 'Larry'),
+        new Egypt('characters/branko', '', 'Branko'),
+        new Egypt('characters/lester', '', 'Lester')
     ];
 
     override function create()
@@ -208,7 +208,7 @@ class MagicalEye extends FlxState
     }
 }
 
-class CharImage
+class Egypt
 {
     public var path:String;
     public var description:String;

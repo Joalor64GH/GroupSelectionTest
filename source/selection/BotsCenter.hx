@@ -24,10 +24,10 @@ class BotsCenter extends FlxState
     var arrows:FlxTypedGroup<FlxSprite>;
 
     var curSelected:Int = 0;
-    var images:Array<CharImage> = [ // first parameter is the image path, second one is the description, third one is the name
-        new CharImage('characters/bonky', '', 'Bonky'),
-        new CharImage('characters/atm', '', 'Mr. ATM'),
-        new CharImage('characters/bob', '', 'Bob Brick')
+    var images:Array<Centers> = [ // first parameter is the image path, second one is the description, third one is the name
+        new Centers('characters/bonky', '', 'Bonky'),
+        new Centers('characters/atm', '', 'Mr. ATM'),
+        new Centers('characters/bob', '', 'Bob Brick')
     ];
 
     override function create()
@@ -194,7 +194,7 @@ class BotsCenter extends FlxState
     }
 }
 
-class CharImage
+class Centers
 {
     public var path:String;
     public var description:String;

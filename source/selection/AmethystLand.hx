@@ -24,16 +24,16 @@ class AmethystLand extends FlxState
     var arrows:FlxTypedGroup<FlxSprite>;
 
     var curSelected:Int = 0;
-    var images:Array<CharImage> = [ // first parameter is the image path, second one is the description, third one is the name
-        new CharImage('characters/plimb', '', 'Plimb'),
-        new CharImage('characters/keybot', '', 'Keybot'),
-        new CharImage('characters/cosmo', '', 'Cosmo V'),
-        new CharImage('characters/bullo', '', 'Bullo'),
-        new CharImage('characters/ryan', '', 'Ryan Ray'),
-        new CharImage('characters/kai', '', 'Kai Candles'),
-        new CharImage('characters/chris', '', 'Chris Tall'),
-        new CharImage('characters/captain', '', 'Captain'),
-        new CharImage('characters/potion', '', 'Potion')
+    var images:Array<Amethysts> = [ // first parameter is the image path, second one is the description, third one is the name
+        new Amethysts('characters/plimb', '', 'Plimb'),
+        new Amethysts('characters/keybot', '', 'Keybot'),
+        new Amethysts('characters/cosmo', '', 'Cosmo V'),
+        new Amethysts('characters/bullo', '', 'Bullo'),
+        new Amethysts('characters/ryan', '', 'Ryan Ray'),
+        new Amethysts('characters/kai', '', 'Kai Candles'),
+        new Amethysts('characters/chris', '', 'Chris Tall'),
+        new Amethysts('characters/captain', '', 'Captain'),
+        new Amethysts('characters/potion', '', 'Potion')
     ];
 
     override function create()
@@ -200,7 +200,7 @@ class AmethystLand extends FlxState
     }
 }
 
-class CharImage
+class Amethysts
 {
     public var path:String;
     public var description:String;

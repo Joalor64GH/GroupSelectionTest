@@ -24,9 +24,9 @@ class SafeFlights extends FlxState
     var arrows:FlxTypedGroup<FlxSprite>;
 
     var curSelected:Int = 0;
-    var images:Array<CharImage> = [ // first parameter is the image path, second one is the description, third one is the name
-        new CharImage('characters/captain', '', 'Captain'),
-        new CharImage('characters/_locked', '', '???')
+    var images:Array<Safe> = [ // first parameter is the image path, second one is the description, third one is the name
+        new Safe('characters/captain', '', 'Captain'),
+        new Safe('characters/_locked', '', '???')
     ];
 
     override function create()
@@ -193,7 +193,7 @@ class SafeFlights extends FlxState
     }
 }
 
-class CharImage
+class Safe
 {
     public var path:String;
     public var description:String;
