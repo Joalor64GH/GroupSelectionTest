@@ -118,23 +118,23 @@ class PlayState extends FlxState
             {
                 switch (curSelected)
                 {
-                    case 1:
+                    case 0:
                         FlxG.switchState(new TheScarlets());
-                    case 2:
+                    case 1:
                         FlxG.switchState(new FastServices());
-                    case 3:
+                    case 2:
                         FlxG.switchState(new BotsCenter());
-                    case 4:
+                    case 3:
                         FlxG.switchState(new MagicalEye());
-                    case 5:
+                    case 4:
                         FlxG.switchState(new EmeraldLand());
-                    case 6:
+                    case 5:
                         FlxG.switchState(new CoopCompany());
-                    case 7:
+                    case 6:
                         FlxG.switchState(new BotsCompany());
-                    case 8:
+                    case 7:
                         FlxG.switchState(new SafeFlights());
-                    case 9:
+                    case 8:
                         FlxG.switchState(new AmethystLand());
                 }
             }
