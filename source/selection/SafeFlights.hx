@@ -1,4 +1,4 @@
-package;
+package selection;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -11,7 +11,7 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 
 import Alphabet;
 
-class PlayState extends FlxState
+class SafeFlights extends FlxState
 {
     var allowInputs:Bool = false;
 
@@ -24,16 +24,9 @@ class PlayState extends FlxState
     var arrows:FlxTypedGroup<FlxSprite>;
 
     var curSelected:Int = 0;
-    var images:Array<IconImage> = [ // first parameter is the image path, second one is the description, third one is the name
-        new IconImage('icons/thescarlets', 'A small team organized by a few teenagers with superpowers, whose purpose is to save their universe and the world!', 'The Scarlets'),
-        new IconImage('icons/fastservices', 'A famous flight service, mainly dedicated for people who are in a rush, and need to travel fast!', 'Fast Services'),
-        new IconImage('icons/botscenter', 'A special care center for robots where they are cared for to live healthy!', 'Bots Center'),
-        new IconImage('icons/magicaleye', 'An Ancient Egyptian team which is famous for being made up of bounty hunters who catch wanted people!', 'Magical Eye'),
-        new IconImage('icons/emeraldland', 'A land famous for being the second richest place in the world, full of jewels with sparkling rivers and strong guards with expensive gem armor!', 'Emerald Land'),
-        new IconImage('icons/coopcompany', 'A team with highly valued and advanced technology made up by robots with Artificial Intelligence and superpowers!', 'Coop Company'),
-        new IconImage('icons/botscompany', 'A robot factory with the best possible technology, being able to create creatures of infinite energy until they discover bugs in reality and use them for robots out of this world!', 'Bots Company'),
-        new IconImage('icons/safeflights', 'The most relaxing and calm flights that exists, with high-level security and guards watching everytime!', 'Safe Flights'),
-        new IconImage('icons/amethystland', 'A land known to be the richest in the world, with the best gems as well as land, security, lairs and advanced technology!', 'Amethyst Land')
+    var images:Array<CharImage> = [ // first parameter is the image path, second one is the description, third one is the name
+        new CharImage('characters/captain', '', 'Captain'),
+        new CharImage('characters/_locked', '', '???')
     ];
 
     override function create()
@@ -111,29 +104,9 @@ class PlayState extends FlxState
                 changeSelection(FlxG.keys.justPressed.RIGHT ? 1 : -1);
             }
 
-            if (FlxG.keys.justPressed.ENTER)
+            if (FlxG.keys.justPressed.ESCAPE)
             {
-                switch (curSelected)
-                {
-                    case 1:
-                        FlxG.switchState(new TheScarlets());
-                    case 2:
-                        FlxG.switchState(new FastServices());
-                    case 3:
-                        FlxG.switchState(new BotsCenter());
-                    case 4:
-                        FlxG.switchState(new MagicalEye());
-                    case 5:
-                        FlxG.switchState(new EmeraldLand());
-                    case 6:
-                        FlxG.switchState(new CoopCompany());
-                    case 7:
-                        FlxG.switchState(new BotsCompany());
-                    case 8:
-                        FlxG.switchState(new SafeFlights());
-                    case 9:
-                        FlxG.switchState(new AmethystLand());
-                }
+                FlxG.switchState(new PlayState());
             }
         }
     }
@@ -220,13 +193,13 @@ class PlayState extends FlxState
     }
 }
 
-class IconImage
+class CharImage
 {
     public var path:String;
     public var description:String;
     public var name:String;
 
-    public function new(img:String, dsc:String, Name:String)
+    public function new(img:String, ?dsc:String, Name:String)
     {
         path = img;
         description = dsc;
