@@ -11,6 +11,8 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 
 import Alphabet;
 
+import selection.*;
+
 class PlayState extends FlxState
 {
     var allowInputs:Bool = false;
@@ -21,6 +23,7 @@ class PlayState extends FlxState
     var image:FlxSprite;
     var leftImage:FlxSprite;
     var rightImage:FlxSprite;
+    
     var arrows:FlxTypedGroup<FlxSprite>;
 
     var curSelected:Int = 0;
